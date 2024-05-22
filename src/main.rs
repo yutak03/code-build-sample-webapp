@@ -8,7 +8,7 @@ async fn index() -> impl Responder {
 }
 
 async fn health_check() -> impl Responder {
-    info!("Health Check is OK");
+    info!("Health Check is OK!!!");
     "OK!!"
 }
 
