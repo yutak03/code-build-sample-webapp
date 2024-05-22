@@ -7,6 +7,12 @@ async fn index() -> impl Responder {
     "Hello, world!"
 }
 
+async fn pipeline() -> impl Responder {
+    info!("CodePipeline!!");
+    "CodePipeline!!"
+}
+
+
 async fn health_check() -> impl Responder {
     info!("Health Check is OK!!!");
     "OK!!"
@@ -26,6 +32,7 @@ async fn main() -> std::io::Result<()> {
         App::new()
             .route("/", web::get().to(index))
             .route("/health", web::get().to(health_check))
+            .route("/pipeline", web::get().to(pipeline))
     })
     .bind("127.0.0.1:8080")?
     .run()
