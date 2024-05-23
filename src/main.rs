@@ -8,7 +8,7 @@ async fn index() -> impl Responder {
 }
 
 async fn pipeline() -> impl Responder {
-    info!("CodePipeline!!");
+    info!("CodePipeline TEST!!");
     "CodePipeline!!"
 }
 
